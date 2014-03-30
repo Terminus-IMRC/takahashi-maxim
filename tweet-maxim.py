@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import os, random
+import os, random, sys
 
 #TODO: this should be specified by command line argument
-MAXIM_FILE="maxim.txt"
+MAXIM_FILE=os.path.dirname(os.path.realpath(sys.argv[0])) + "/maxim.txt"
 
 maxim=[]
 
@@ -19,4 +19,4 @@ while s!="":
 	s=f.readline()
 
 elem=random.randint(0, len(maxim)-1)
-os.system("ttytter -ssl -status=\"%s\""%(maxim[elem]))
+os.system("ttytter -ssl -keyf=.takahashi -status=\"%s\""%(maxim[elem]))
