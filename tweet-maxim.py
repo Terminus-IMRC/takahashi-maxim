@@ -10,7 +10,7 @@ f=open(MAXIM_FILE, "r")
 
 s=f.readline()
 tmpstr=''
-while s!="":
+while s!='':
 	if s=='\n':
 		maxim.append(tmpstr)
 		tmpstr=''
